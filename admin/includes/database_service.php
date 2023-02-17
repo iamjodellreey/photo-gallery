@@ -6,7 +6,7 @@ class DatabaseService
     {
 
         $sql = "SELECT * FROM " . static::$tableName . " WHERE ";
-        $sql .= "${field} LIKE '%${keyword}%' ";
+        $sql .= "{$field} LIKE '%{$keyword}%' ";
 
         $result = self::getQuery($sql);
 
